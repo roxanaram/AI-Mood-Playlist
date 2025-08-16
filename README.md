@@ -8,23 +8,31 @@
 - **Spotify API integration** (Client Credentials flow, no login required)
 - **Lightweight & easy to run**
 
-## Setup
-1. Clone this repo
+## Installation
+1. Clone this repository and install dependencies:
 ```bash
-git clone https://github.com/your-username/ai-mood-playlist.git
-cd ai-mood-playlist
-```
-2. Create `.env` from `.env.example` and add your API keys
-3. Install dependencies:
-```bash
+git clone https://github.com/roxanaram/AI-Mood-Playlist.git
+cd AI-Mood-Playlist
 pip install -r requirements.txt
 ```
-4. Run the Streamlit app in Terminal:
+
+1. Create a `.env` file in the project root:
+```ini
+OPENAI_API_KEY=your_openai_api_key_here
+SPOTIPY_CLIENT_ID=your_spotify_client_id
+SPOTIPY_CLIENT_SECRET=your_spotify_client_secret
+SPOTIPY_REDIRECT_URI=http://localhost:8888/callback
+```
+**⚠️ Never commit .env to GitHub! (It’s already ignored in .gitignore.)**
+
+2. Replace `your_openai_api_key_here` and Spotify credentials with your own.
+
+## Run the App
 ```bash
 streamlit run app.py
 ```
+Then open the provided localhost URL in your browser.
 
-✅ No Spotify login required — just run and enjoy your AI DJ!
 
 ## Example Usage
 
